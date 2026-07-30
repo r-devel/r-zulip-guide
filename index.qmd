@@ -1,5 +1,11 @@
-# Preface {.unnumbered}
+---
+title: The R Project Zulip Guide
+author: R Contribution Working Group
+format: 
+  html:
+    toc: true
+---
 
-This is a Quarto book.
+## Section 1
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+## Section 2
