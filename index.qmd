@@ -7,8 +7,9 @@ format:
 ---
 
 ::: {.callout-note}
-This Zulip-specific guidance below is adapted from [Rust's Zulip Guidance](https://forge.rust-lang.org/platforms/zulip.html) and [Zulip tips and tricks for Bioconductor](https://docs.google.com/document/d/1BY_eWPRE4jvUcw1Uzem_obn6ryN7tmApWfEU0lxP63o/edit?tab=t.0#heading=h.gwhrk04d0svl).
-Thanks to our friends in those communities for their materials and advice on setting up The R Project Zulip.
+The R Project Zulip is currently in a testing period and access is by invitation only.
+
+We anticipate opening sign-ups in mid-September 2026.
 :::
 
 [The R Project Zulip](https://r-project.zulipchat.com) is a supportive space to foster the community of contributors to R core development:
@@ -170,3 +171,11 @@ The CoC is adapted from the [useR! Code of Conduct](https://www.r-project.org/co
 
 Parts of the above text are licensed [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/). 
 Credit to [SRCCON](https://srccon.org/conduct/). This code of conduct was based on that developed for [useR! 2018](https://user2018.r-project.org/code_of_conduct/) which was a revision of the code of conduct used at previous useR!s and also drew from [rOpenSci's code of conduct](https://ropensci.org/coc/).
+
+## Acknowledgements
+
+- This work was supported by the Research Software Maintenance Fund,
+managed by the Software Sustainability Institute and funded by UKRI grant
+reference AH/Z000114/1.
+- This Zulip-specific guidance above is adapted from [Rust's Zulip Guidance](https://forge.rust-lang.org/platforms/zulip.html) and [Zulip tips and tricks for Bioconductor](https://docs.google.com/document/d/1BY_eWPRE4jvUcw1Uzem_obn6ryN7tmApWfEU0lxP63o/edit?tab=t.0#heading=h.gwhrk04d0svl).
+Thanks to our friends in those communities for their materials and advice on setting up The R Project Zulip.
