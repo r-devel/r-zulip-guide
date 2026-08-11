@@ -4,6 +4,8 @@ author: R Contribution Working Group
 format: 
   html:
     toc: true
+    axe: 
+      output: document
 ---
 
 ::: {.callout-note}
@@ -49,7 +51,7 @@ By joining the Zulip, members also agree to the general [code of conduct](#code-
 - You’ll likely want to configure the channels that you’re subscribed to when getting started; the default set is quite limited, and there are many groups that exist beyond it.
 - [Topics](https://zulip.com/help/introduction-to-topics) are a foundational feature of Zulip. They sit within channels and all posts must be under a topic. 
 It can be helpful to think of topics like e-mail subjects.
--It’s not necessary to introduce yourself, but feel free to say hello in the `#0_welcome` channel.
+-It’s not necessary to introduce yourself, but feel free to say hello in the `#welcome` channel.
 - App: You can use Zulip in a browser, but many people prefer the desktop app or mobile app for quicker access. Download them here: <https://zulip.com/apps/>
 - Notifications: By default, you should get email notifications for direct messages, @mentions, and [topics you follow](https://r-project.zulipchat.com/help/follow-a-topic). You can adjust in ⚙️ → Personal settings → Notifications
 
