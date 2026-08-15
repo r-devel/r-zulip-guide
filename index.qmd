@@ -29,8 +29,8 @@ It is *not* intended as a general discussion forum about using R, or for
 "grass-roots" communities related to R. Please use the [alternative R
 forums](https://www.r-project.org/mail.html) for such chat.
 
-[[Join/Go to R Project Zulip](https://r-project.zulipchat.com)]{.btn
-.btn-primary role="button" style="font-size: 1.5em;"}
+[[Join/Go to R Project Zulip]{.btn
+.btn-primary role="button" style="font-size: 1.5em;"}](https://r-project.zulipchat.com)
 
 ## Posting guide
 
