@@ -17,8 +17,8 @@ We anticipate making the full, open launch on September 22nd 2026.
 :::
 
 [The R Project Zulip](https://r-project.zulipchat.com) is a supportive
-space to chat about developing, maintaining, and supporting the R
-project, e.g.
+space to chat about developing, maintaining, and supporting [The R
+Project](https://r-project.org), e.g.
 
 - Contributing to base R
 - Developing and maintaining supporting infrastructure (e.g. CRAN
@@ -79,10 +79,10 @@ for all.
   e-mail subjects.
 - It’s not necessary to introduce yourself, but feel free to say hello
   in the `#welcome` channel.
-- App: You can use Zulip in a browser, but many people prefer the
+- You can use Zulip in a browser, but many people prefer the
   desktop app or mobile app for quicker access. Download them here:
   <https://zulip.com/apps/>
-- Notifications: By default, you should get email notifications for
+- By default, you should get email notifications for
   direct messages, @mentions, and [topics you
   follow](https://r-project.zulipchat.com/help/follow-a-topic). You can
   adjust in ⚙️ → Personal settings → Notifications
@@ -96,13 +96,13 @@ You choose which channels you subscribe to. We have organized the
 channels into folders - you can filter available channels by folder to
 find channels related to each other.
 
-Note that channels used to be called 'Streams' in Zulip, so if you look
+Note that channels used to be called 'streams' in Zulip, so if you look
 at older documentation, you may see that terminology.
 
 ### Current folders
 
 - GENERAL: channels of general interest
-- ZULIP: channels related to using zulip
+- ZULIP: channels related to using Zulip
 
 ### Default channels
 
@@ -151,15 +151,16 @@ subjects is helpful.
   It helps keeps things organised and allows others to find and follow
   conversations more easily. Users can move their own messages up to a
   week after posting. Admins can move them anytime.
-- When in doubt, post in #general and we can help move it later
+- When in doubt, post in `#general` and we can help move it later 
+  (though please use sparingly!)
 
 ## Linkifiers
 
 Our Zulip supports linkifiers for GitHub.
 
-Generally, `github-org/repo#123` works for linking to an issue or PR;
-the below list gives a few more “special cased” repositories. Markdown
-syntax for links also works.
+Generally, `github-org/repo#123` works for linking to an issue or PR. 
+The below list gives a few more “special cased” repositories. 
+Markdown syntax for links also works.
 
 We support linking to issues or pull requests on repositories inside the
 `r-devel` GitHub organisation without requiring the `r-devel/` prefix.
@@ -174,11 +175,11 @@ linkifier (though typing directly does not).
 
 If you would like to propose further linkifiers, see [the
 documentation](https://zulip.com/help/add-a-custom-linkifier) of the
-format, and propose one in the #zulip channel.
+format, and propose one in the `#zulip` channel.
 
 ## Etiquette and best practices
 
-- Use @mentions thoughtfully - only tag someone if their input is really
+- Use `@mentions` thoughtfully - only tag someone if their input is really
   needed
 - Don't worry about posting in the wrong place - messages can be moved
 - You can edit your own messages for up to 1 day, and delete them within
@@ -197,18 +198,17 @@ format, and propose one in the #zulip channel.
 - Use /poll for quick topic polls. Just type /poll the fill in the
   question. Answer options go on the following lines (one line per
   option). The poll must be the whole message.
-- Managing Multiple Platforms. Some users route updates from Zulip,
+- To manage multiple platforms, some users route updates from Zulip,
   Slack, GitHub, etc. into email as a central place to catch up. You can
   customise Zulip’s email notifications (e.g. digest timing) in ⚙️ →
   Personal settings → Notifications. Others use apps like
   [Ferdium](https://ferdium.org) (open source) or
-  [Rambox](https://rambox.app) to manage multiple apps in one interface.
-  This, of course, is optional! Check their websites and their privacy
-  policies to see if they suit your setup.
+  [Rambox](https://rambox.app) to manage multiple apps in one interface. 
+  Check their websites and their privacy policies to see if they suit your setup.
 
-## Interact with Zulip via Email
+## Interact with Zulip via email
 
-It is possible to interact with Zulip post email, but there is a bit of
+It is possible to interact with Zulip via email, but there is a bit of
 set up.
 
 ### Set up to receive posts by email
@@ -222,7 +222,7 @@ set up.
     you can create rules in you email client to file emails by channel
     name (unfortunately the folder name is not included, so it up to you
     to group channels together in a meaningful way).
-3.  Close the Zulip app or lgout. Email notifications are only sent when you are 
+3.  Close the Zulip app or logout. Email notifications are only sent when you are 
     not "active", i.e. you do not have the app open and in focus (within the 
     last 140s).
 
@@ -232,9 +232,10 @@ When you receive a notification, the full message is included in the email and
 you can reply by email - no need to open Zulip!
 
 Tips: 
+
 * Reply with the body of your message only - do not include a salutation 
 (e.g. "Hi Heather!") or sign off (e.g. "Best wishes, Ella").
-* Write in plain text, use markdown formatting for lists, code, math, tables,
+* Write in plain text, using markdown formatting for lists, code, math, tables,
 etc. This will then be converted to nicely formatted HTML for people using 
 the browser or app. (This works even for HTML email, as long as you have 
 only used plain text/markdown in the message).
