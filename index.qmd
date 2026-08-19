@@ -78,7 +78,7 @@ for all.
   must be under a topic. It can be helpful to think of topics like
   e-mail subjects.
 - It’s not necessary to introduce yourself, but feel free to say hello
-  in the `#welcome` channel.
+  in the `#introductions` channel.
 - You can use Zulip in a browser, but many people prefer the
   desktop app or mobile app for quicker access. Download them here:
   <https://zulip.com/apps/>
@@ -101,18 +101,32 @@ at older documentation, you may see that terminology.
 
 ### Current folders
 
-- GENERAL: channels of general interest
-- ZULIP: channels related to using Zulip
+- GENERAL: Channels of general interest to those contributing to The R Project
+- R CONTRIBUTION: Channels related to contributing to the code and documentation of base R
+- TRANSLATION: Channels related to translation of materials in base R/recommended packages
+- CRAN: Channels related to CRAN <https://cran.r-project.org>
+- ZULIP: Channels related to using Zulip
 
 ### Default channels
 
 The current set of default channels is:
 
 - GENERAL \> announce: Announcements from the admins
+- GENERAL \> events: Virtual/in-person meet-ups, study groups, book clubs, etc**\***
 - GENERAL \> general: Chat of general interest across the R project (use
   sparingly!)
+- GENERAL \> introductions: Say hello and a little bit about yourself
+- GENERAL \> random: Informal conversation and other events/projects not directly related to R contribution.
+- GENERAL \> paid-work: Job opportunties in open source development**\***
+- GENERAL \> volunteer-work: Unpaid opportunities in open source development**\***
 - ZULIP \> sandbox: Experiment with Zulip here
 - ZULIP \> zulip: Questions and discussion about using Zulip
+
+::: {.callout-note}
+that channels with an **\*** have moderated topics. 
+Only admins can start a topic but anyone can reply. 
+DM the admins to suggest a new topic.
+:::
 
 ## Topics
 
