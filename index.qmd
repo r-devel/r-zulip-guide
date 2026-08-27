@@ -76,7 +76,7 @@ for all.
 - [Topics](https://zulip.com/help/introduction-to-topics) are a
   foundational feature of Zulip. They sit within channels and all posts
   must be under a topic. It can be helpful to think of topics like
-  e-mail subjects.
+  email subjects.
 - It’s not necessary to introduce yourself, but feel free to say hello
   in the `#introductions` channel.
 - You can use Zulip in a browser, but many people prefer the
@@ -92,7 +92,7 @@ for all.
 Channels organise conversations based on who needs to see them.
 Discussions in a channel should stick to the channel purpose.
 
-You choose which channels you subscribe to. We have organized the
+You choose which channels you subscribe to. We have organised the
 channels into folders - you can filter available channels by folder to
 find channels related to each other.
 
@@ -132,7 +132,7 @@ DM the admins to suggest a new topic.
 
 Zulip is designed around conversations that are labeled with
 [**topics**](https://zulip.com/help/introduction-to-topics), to make
-communication organized and efficient. It’s easy to get an overview of
+communication organised and efficient. It’s easy to get an overview of
 what conversations are happening, and to read one conversation at a
 time.
 
@@ -280,7 +280,7 @@ harassment-free chat space for everyone regardless of age, gender,
 sexual orientation, disability, physical appearance, race, or religion
 (or lack thereof).
 
-### Expected Behaviour
+### Expected behaviour
 
 All members agree to:
 
