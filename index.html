@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="R Contribution Working Group">
 
-<title>The R Project Zulip Guide</title>
+<title>The R Project Zulip Chat</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,19 +39,16 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-41452c927a43b12b7e59678aacb93f8e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-03dca69276d74d969b05ab4f66a51229.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-41452c927a43b12b7e59678aacb93f8e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="index_files/libs/quarto-axe/axe.min.js"></script>
-<script src="index_files/libs/quarto-axe/axe-check.js" type="module"></script>
-<script id="quarto-axe-checker-options" type="text/plain">eyJvdXRwdXQiOiJjb25zb2xlIn0=</script>
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-3a5af16af3ba39e36d33306d2fb4b84d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="index_files/libs/bootstrap/bootstrap-dark-5712676deebbf45dd910c5d2ff237d0a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="index_files/libs/bootstrap/bootstrap-3a5af16af3ba39e36d33306d2fb4b84d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-3e150ce13b390e781214d148e8ef5c4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark-3bd0d314d6d38a9b69b12bb001feed99.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="index_files/libs/bootstrap/bootstrap-3e150ce13b390e781214d148e8ef5c4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
-<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -217,61 +213,19 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#posting-guide" id="toc-posting-guide" class="nav-link active" data-scroll-target="#posting-guide">Posting guide</a></li>
-  <li><a href="#getting-started-with-zulip" id="toc-getting-started-with-zulip" class="nav-link" data-scroll-target="#getting-started-with-zulip">Getting started with Zulip</a></li>
-  <li><a href="#channels" id="toc-channels" class="nav-link" data-scroll-target="#channels">Channels</a>
-  <ul class="collapse">
-  <li><a href="#current-folders" id="toc-current-folders" class="nav-link" data-scroll-target="#current-folders">Current folders</a></li>
-  <li><a href="#default-channels" id="toc-default-channels" class="nav-link" data-scroll-target="#default-channels">Default channels</a></li>
-  </ul></li>
-  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a>
-  <ul class="collapse">
-  <li><a href="#tips-for-using-topics-effectively" id="toc-tips-for-using-topics-effectively" class="nav-link" data-scroll-target="#tips-for-using-topics-effectively">Tips for using topics effectively</a></li>
-  </ul></li>
-  <li><a href="#linkifiers" id="toc-linkifiers" class="nav-link" data-scroll-target="#linkifiers">Linkifiers</a></li>
-  <li><a href="#etiquette-and-best-practices" id="toc-etiquette-and-best-practices" class="nav-link" data-scroll-target="#etiquette-and-best-practices">Etiquette and best practices</a></li>
-  <li><a href="#hidden-gems-power-user-tips" id="toc-hidden-gems-power-user-tips" class="nav-link" data-scroll-target="#hidden-gems-power-user-tips">Hidden gems / power-user tips</a></li>
-  <li><a href="#interact-with-zulip-via-email" id="toc-interact-with-zulip-via-email" class="nav-link" data-scroll-target="#interact-with-zulip-via-email">Interact with Zulip via email</a>
-  <ul class="collapse">
-  <li><a href="#set-up-to-receive-posts-by-email" id="toc-set-up-to-receive-posts-by-email" class="nav-link" data-scroll-target="#set-up-to-receive-posts-by-email">Set up to receive posts by email</a></li>
-  <li><a href="#reply-to-emails" id="toc-reply-to-emails" class="nav-link" data-scroll-target="#reply-to-emails">Reply to emails</a></li>
-  <li><a href="#start-new-topics-in-a-channel" id="toc-start-new-topics-in-a-channel" class="nav-link" data-scroll-target="#start-new-topics-in-a-channel">Start new topics in a channel</a></li>
-  </ul></li>
-  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct">Code of conduct</a>
-  <ul class="collapse">
-  <li><a href="#expected-behaviour" id="toc-expected-behaviour" class="nav-link" data-scroll-target="#expected-behaviour">Expected Behaviour</a></li>
-  <li><a href="#unacceptable-behaviour" id="toc-unacceptable-behaviour" class="nav-link" data-scroll-target="#unacceptable-behaviour">Unacceptable behaviour</a></li>
-  <li><a href="#procedure-for-code-of-conduct-violations" id="toc-procedure-for-code-of-conduct-violations" class="nav-link" data-scroll-target="#procedure-for-code-of-conduct-violations">Procedure for code of conduct violations</a></li>
-  <li><a href="#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour" id="toc-what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour" class="nav-link" data-scroll-target="#what-to-do-if-you-witness-or-are-subject-to-unacceptable-behaviour">What to do if you witness or are subject to unacceptable behaviour</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  </ul></li>
-  <li><a href="#acknowledgements-1" id="toc-acknowledgements-1" class="nav-link" data-scroll-target="#acknowledgements-1">Acknowledgements</a></li>
-  </ul>
-</nav>
-</div>
+
 <main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The R Project Zulip Guide</h1>
+<h1 class="title">The R Project Zulip Chat</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>R Contribution Working Group </p>
-          </div>
-  </div>
     
   
     
@@ -282,6 +236,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
+<p>The R Project Zulip is a supportive space to chat about developing, maintaining, and supporting <a href="https://r-project.org">The R Project</a>, e.g.</p>
+<ul>
+<li>Contributing to base R</li>
+<li>Developing and maintaining supporting infrastructure (e.g.&nbsp;CRAN Cookbook, Weblate)</li>
+<li>R Foundation activities (e.g.&nbsp;useR! organisation)</li>
+</ul>
+<p>It is <em>not</em> intended as a general discussion forum about using R ir R packages, installation issues, package development, or for “grass-roots” communities related to R. For chat or questions that are <strong>off-topic</strong>, please use an <a href="r-help.qmd">alternative forum for help</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -292,20 +255,44 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The R Project Zulip is currently in a testing period and access is by invitation only.</p>
-<p>We anticipate making the full, open launch on September 22nd 2026.</p>
+<p>By joining The R Project Zulip, members also agree to the <a href="#code-of-conduct">Code of Conduct</a> below. The administrators will enforce this code of conduct and expect cooperation in ensuring a safe environment for all.</p>
 </div>
 </div>
-<p><a href="https://r-project.zulipchat.com">The R Project Zulip</a> is a supportive space to chat about developing, maintaining, and supporting <a href="https://r-project.org">The R Project</a>, e.g.</p>
-<ul>
-<li>Contributing to base R</li>
-<li>Developing and maintaining supporting infrastructure (e.g.&nbsp;CRAN Cookbook, Weblate)</li>
-<li>R Foundation activities (e.g.&nbsp;useR! organisation)</li>
-</ul>
-<p>It is <em>not</em> intended as a general discussion forum about using R, or for “grass-roots” communities related to R. Please use the <a href="https://www.r-project.org/mail.html">alternative R forums</a> for such chat.</p>
 <p><a href="https://r-project.zulipchat.com"><span class="btn btn-primary" role="button" style="font-size: 1.5em;">Join/Go to R Project Zulip</span></a></p>
-<section id="posting-guide" class="level2">
-<h2 class="anchored" data-anchor-id="posting-guide">Posting guide</h2>
+</section>
+<section id="getting-started-with-zulip" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started-with-zulip">Getting started with Zulip</h2>
+<p>We recommend reading Zulip’s official <a href="https://zulip.com/help/getting-started-with-zulip">getting started guide</a>. Although there are many similarities between Zulip and other chat platforms, e.g.&nbsp;Slack, there is much that is specific to Zulip that could seem unintuitive, and reading that doc is a great place to start. For more detail, see <a href="https://zulip.com/help/">Zulip’s user documentation</a>.</p>
+<p>When you join, the <strong>Welcome Bot 🤖</strong> will send you a short message with your first steps inside the platform. You can return to this message at any time to review the instructions.</p>
+<section id="desktop-and-mobile-apps" class="level3">
+<h3 class="anchored" data-anchor-id="desktop-and-mobile-apps">Desktop and mobile apps</h3>
+<p>You can use Zulip in a browser, but you may prefer the desktop or mobile app for quicker access.</p>
+<p><a href="https://zulip.com/apps">Download the apps here</a>.</p>
+</section>
+<section id="set-up-your-profile" class="level3">
+<h3 class="anchored" data-anchor-id="set-up-your-profile">Set up your profile</h3>
+<p>Go to ⚙️ → Personal settings → Profile.</p>
+<p>Adding a few details to your profile can help other contributors recognise you and understand how you are involved in The R Project. You can add a profile photo, your name, pronouns, job or community role, location, links to GitHub or GitLab, social media, and a personal or professional website.</p>
+</section>
+<section id="choose-your-channels" class="level3">
+<h3 class="anchored" data-anchor-id="choose-your-channels">Choose your channels</h3>
+<p>You’ll likely want to configure the channels that you’re subscribed to when getting started. The default set is quite limited, and there are many other channels you can subscribe to depending on your interests and how you contribute to The R Project.</p>
+<p>See the <a href="#channels">Channels</a> section for more information about how channels are organised and which channels are available.</p>
+</section>
+<section id="notifications" class="level3">
+<h3 class="anchored" data-anchor-id="notifications">Notifications</h3>
+<p>By default, you should get email notifications for direct messages, <span class="citation" data-cites="mentions">@mentions</span>, and topics you follow.</p>
+<p>To adjust your notification settings go to ⚙️ → Personal settings → Notifications.</p>
+</section>
+<section id="introduce-yourself" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-yourself">Introduce yourself</h3>
+<p>It’s not necessary to introduce yourself, but feel free to say hello in the #introductions channel.</p>
+</section>
+</section>
+<section id="participating-in-the-r-project-zulip" class="level2">
+<h2 class="anchored" data-anchor-id="participating-in-the-r-project-zulip">Participating in The R Project Zulip</h2>
+<section id="posting-guide" class="level3">
+<h3 class="anchored" data-anchor-id="posting-guide">Posting guide</h3>
 <p>To create a welcoming and supportive chat space, we ask members to:</p>
 <ul>
 <li>Be welcoming, friendly and patient.</li>
@@ -319,33 +306,32 @@ Note
 <li>avoid using terms such as “manpower”</li>
 </ul></li>
 </ul>
-<p>The administrators will remind people of the posting guide if necessary and reserve the right to deactivate the membership of anyone persistently acting against the ethos of the chat space.</p>
-<p><strong>Messages on public channels of the Zulip may be put in a public archive or shared outside the Zulip</strong>. Use direct messages/private channels for private messages, which should not be shared without consent.</p>
-<p>By joining the Zulip, members also agree to the general <a href="#code-of-conduct">code of conduct</a> below. The administrators will enforce this code of conduct and expect cooperation in ensuring a safe environment for all.</p>
 </section>
-<section id="getting-started-with-zulip" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started-with-zulip">Getting started with Zulip</h2>
+<section id="etiquette-and-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="etiquette-and-best-practices">Etiquette and best practices</h3>
 <ul>
-<li>We recommend reading Zulip’s official <a href="https://zulip.com/help/getting-started-with-zulip">getting started guide</a>. Although there are many similarities between Zulip and other chat platforms like Slack, there is much that is specific to Zulip that could seem unintuitive, and reading that doc is a great place to start. For more detail, see <a href="https://zulip.com/help/">Zulip’s user documentation</a>.</li>
-<li>You’ll likely want to configure the channels that you’re subscribed to when getting started; the default set is quite limited, and there are many channels that exist beyond it.</li>
-<li><a href="https://zulip.com/help/introduction-to-topics">Topics</a> are a foundational feature of Zulip. They sit within channels and all posts must be under a topic. It can be helpful to think of topics like e-mail subjects.</li>
-<li>It’s not necessary to introduce yourself, but feel free to say hello in the <code>#introductions</code> channel.</li>
-<li>You can use Zulip in a browser, but many people prefer the desktop app or mobile app for quicker access. Download them here: <a href="https://zulip.com/apps/" class="uri">https://zulip.com/apps/</a></li>
-<li>By default, you should get email notifications for direct messages, <span class="citation" data-cites="mentions">@mentions</span>, and <a href="https://r-project.zulipchat.com/help/follow-a-topic">topics you follow</a>. You can adjust in ⚙️ → Personal settings → Notifications</li>
+<li>Use <code>@mentions</code> thoughtfully - only tag someone if their input is really needed</li>
+<li>Don’t worry about posting in the wrong place - messages can be moved</li>
+<li>You can edit your own messages for up to 1 day, and delete them within 10 minutes—these limits are set by the admins. If you need to clarify something later, it’s usually better to post a follow-up message. Admins can delete a message at any time.</li>
 </ul>
 </section>
-<section id="channels" class="level2">
-<h2 class="anchored" data-anchor-id="channels">Channels</h2>
+</section>
+<section id="zulip-structure-and-conversations" class="level2">
+<h2 class="anchored" data-anchor-id="zulip-structure-and-conversations">Zulip structure and conversations</h2>
+<section id="channels" class="level3">
+<h3 class="anchored" data-anchor-id="channels">Channels</h3>
 <p>Channels organise conversations based on who needs to see them. Discussions in a channel should stick to the channel purpose.</p>
-<p>You choose which channels you subscribe to. We have organized the channels into folders - you can filter available channels by folder to find channels related to each other.</p>
+<p>You choose which channels you subscribe to. We have organized the channels into folders. You can filter available channels by folder to find channels related to each other.</p>
 <p>Note that channels used to be called ‘streams’ in Zulip, so if you look at older documentation, you may see that terminology.</p>
+</section>
 <section id="current-folders" class="level3">
 <h3 class="anchored" data-anchor-id="current-folders">Current folders</h3>
 <ul>
 <li>GENERAL: Channels of general interest to those contributing to The R Project</li>
 <li>R CONTRIBUTION: Channels related to contributing to the code and documentation of base R</li>
+<li>MODERATED TOPICS: Channels where only the admins can start a new topic, but anyone can reply to a topic. These are used for posting about events and jobs. Please DM the admins if you would like to propose a new topic in one of these channel.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
 <li>TRANSLATION: Channels related to translation of materials in base R/recommended packages</li>
-<li>CRAN: Channels related to CRAN <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
+<li>CRAN: Channels related to <a href="https://cran.r-project.org">CRAN</a></li>
 <li>ZULIP: Channels related to using Zulip</li>
 </ul>
 </section>
@@ -354,37 +340,23 @@ Note
 <p>The current set of default channels is:</p>
 <ul>
 <li>GENERAL &gt; announce: Announcements from the admins</li>
-<li>GENERAL &gt; events: Virtual/in-person meet-ups, study groups, book clubs, etc<strong>*</strong></li>
 <li>GENERAL &gt; general: Chat of general interest across the R project (use sparingly!)</li>
 <li>GENERAL &gt; introductions: Say hello and a little bit about yourself</li>
-<li>GENERAL &gt; random: Informal conversation and other events/projects not directly related to R contribution.</li>
-<li>GENERAL &gt; paid-work: Job opportunties in open source development<strong>*</strong></li>
-<li>GENERAL &gt; volunteer-work: Unpaid opportunities in open source development<strong>*</strong></li>
+<li>GENERAL &gt; random: Informal conversation and other events/projects not directly related to R contribution</li>
+<li>MODERATED TOPICS &gt; events: Virtual/in-person meet-ups, study groups, book clubs, etc</li>
+<li>MODERATED TOPICS &gt; paid-work: Job opportunties in open source development</li>
+<li>MODERATED TOPICS &gt; volunteer-work: Unpaid opportunities in open source development</li>
 <li>ZULIP &gt; sandbox: Experiment with Zulip here</li>
 <li>ZULIP &gt; zulip: Questions and discussion about using Zulip</li>
 </ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Channels with an <strong>*</strong> have moderated topics. Only admins can start a topic but anyone can reply. DM the admins to suggest a new topic.</p>
-</div>
-</div>
 </section>
-</section>
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<section id="topics" class="level3">
+<h3 class="anchored" data-anchor-id="topics">Topics</h3>
 <p>Zulip is designed around conversations that are labeled with <a href="https://zulip.com/help/introduction-to-topics"><strong>topics</strong></a>, to make communication organized and efficient. It’s easy to get an overview of what conversations are happening, and to read one conversation at a time.</p>
 <p>Topics are a foundational idea in Zulip, and central to the chat experience. They are conceptually similar to threads in Slack, but much more important in Zulip, with the official docs describing them as “one of the most wonderful aspects of using Zulip”. They enable lots of conversations to happen in the same channel at the same time, and conversations can last hours or days without messages getting lost. Topics appear in the left sidebar.</p>
 <p>Topics form subdivisions within channels, and every message <em>must</em> be part of a topic. Topics are generally transient, and live for as long as there is active discussion on a topic. Thinking of topics like email subjects is helpful.</p>
-<section id="tips-for-using-topics-effectively" class="level3">
-<h3 class="anchored" data-anchor-id="tips-for-using-topics-effectively">Tips for using topics effectively</h3>
+<section id="tips-for-using-topics-effectively" class="level4">
+<h4 class="anchored" data-anchor-id="tips-for-using-topics-effectively">Tips for using topics effectively</h4>
 <ul>
 <li>Topic names should be short, descriptive and clear, ideally no more than three or four words</li>
 <li>Keep replies in the same topic to help others follow the discussion</li>
@@ -395,8 +367,20 @@ Note
 </ul>
 </section>
 </section>
-<section id="linkifiers" class="level2">
-<h2 class="anchored" data-anchor-id="linkifiers">Linkifiers</h2>
+</section>
+<section id="useful-features" class="level2">
+<h2 class="anchored" data-anchor-id="useful-features">Useful features</h2>
+<section id="hidden-gems-power-user-tips" class="level3">
+<h3 class="anchored" data-anchor-id="hidden-gems-power-user-tips">Hidden gems / power-user tips</h3>
+<ul>
+<li>Star messages to bookmark them. Click the three dots ⋯ next to any message → “Star message”. You can find your starred messages under Views → Starred messages in the left-hand panel.</li>
+<li>Use keyboard shortcuts (web/desktop app only). Press ? to open the full list—things like r to reply, n to move to the next unread message, or m to mute a topic.</li>
+<li>Use /poll for quick topic polls. Just type /poll the fill in the question. Answer options go on the following lines (one line per option). The poll must be the whole message.</li>
+<li>To manage multiple platforms, some users route updates from Zulip, Slack, GitHub, etc. into email as a central place to catch up. You can customise Zulip’s email notifications (e.g.&nbsp;digest timing) in ⚙️ → Personal settings → Notifications. Others use apps like <a href="https://ferdium.org">Ferdium</a> (open source) or <a href="https://rambox.app">Rambox</a> to manage multiple apps in one interface. Check their websites and their privacy policies to see if they suit your setup.</li>
+</ul>
+</section>
+<section id="linkifiers" class="level3">
+<h3 class="anchored" data-anchor-id="linkifiers">Linkifiers</h3>
 <p>Our Zulip supports linkifiers for GitHub.</p>
 <p>Generally, <code>github-org/repo#123</code> works for linking to an issue or PR. The below list gives a few more “special cased” repositories. Markdown syntax for links also works.</p>
 <p>We support linking to issues or pull requests on repositories inside the <code>r-devel</code> GitHub organisation without requiring the <code>r-devel/</code> prefix. For example:</p>
@@ -408,36 +392,19 @@ Note
 <p>Pasting a link to a GitHub issue or PR will convert it to the short linkifier (though typing directly does not).</p>
 <p>If you would like to propose further linkifiers, see <a href="https://zulip.com/help/add-a-custom-linkifier">the documentation</a> of the format, and propose one in the <code>#zulip</code> channel.</p>
 </section>
-<section id="etiquette-and-best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="etiquette-and-best-practices">Etiquette and best practices</h2>
-<ul>
-<li>Use <code>@mentions</code> thoughtfully - only tag someone if their input is really needed</li>
-<li>Don’t worry about posting in the wrong place - messages can be moved</li>
-<li>You can edit your own messages for up to 1 day, and delete them within 10 minutes—these limits are set by the admins. If you need to clarify something later, it’s usually better to post a follow-up message. Admins can delete a message at any time.</li>
-</ul>
-</section>
-<section id="hidden-gems-power-user-tips" class="level2">
-<h2 class="anchored" data-anchor-id="hidden-gems-power-user-tips">Hidden gems / power-user tips</h2>
-<ul>
-<li>Star messages to bookmark them. Click the three dots ⋯ next to any message → “Star message”. You can find your starred messages under Views → Starred messages in the left-hand panel.</li>
-<li>Use keyboard shortcuts (web/desktop app only). Press ? to open the full list—things like r to reply, n to move to the next unread message, or m to mute a topic.</li>
-<li>Use /poll for quick topic polls. Just type /poll the fill in the question. Answer options go on the following lines (one line per option). The poll must be the whole message.</li>
-<li>To manage multiple platforms, some users route updates from Zulip, Slack, GitHub, etc. into email as a central place to catch up. You can customise Zulip’s email notifications (e.g.&nbsp;digest timing) in ⚙️ → Personal settings → Notifications. Others use apps like <a href="https://ferdium.org">Ferdium</a> (open source) or <a href="https://rambox.app">Rambox</a> to manage multiple apps in one interface. Check their websites and their privacy policies to see if they suit your setup.</li>
-</ul>
-</section>
-<section id="interact-with-zulip-via-email" class="level2">
-<h2 class="anchored" data-anchor-id="interact-with-zulip-via-email">Interact with Zulip via email</h2>
+<section id="interact-with-zulip-via-email" class="level3">
+<h3 class="anchored" data-anchor-id="interact-with-zulip-via-email">Interact with Zulip via email</h3>
 <p>It is possible to interact with Zulip via email, but there is a bit of set up.</p>
-<section id="set-up-to-receive-posts-by-email" class="level3">
-<h3 class="anchored" data-anchor-id="set-up-to-receive-posts-by-email">Set up to receive posts by email</h3>
+<section id="set-up-to-receive-posts-by-email" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-to-receive-posts-by-email">Set up to receive posts by email</h4>
 <ol type="1">
 <li>Log in to Zulip and go to ⚙️ → Personal settings → Notifications. Check <code>Email</code> for <code>Channels</code> (it is checked by default for DMs, mentions, alerts and followed topics).</li>
 <li>Subscribe to any channels you want to receive messages about. We suggest unsubscribing from the default channels #sandbox and #zulip. Emails will have subject line of the form <code>#channel-name &gt; topic</code> so you can create rules in you email client to file emails by channel name (unfortunately the folder name is not included, so it up to you to group channels together in a meaningful way).</li>
 <li>Close the Zulip app or logout. Email notifications are only sent when you are not “active”, i.e.&nbsp;you do not have the app open and in focus (within the last 140s).</li>
 </ol>
 </section>
-<section id="reply-to-emails" class="level3">
-<h3 class="anchored" data-anchor-id="reply-to-emails">Reply to emails</h3>
+<section id="reply-to-emails" class="level4">
+<h4 class="anchored" data-anchor-id="reply-to-emails">Reply to emails</h4>
 <p>When you receive a notification, the full message is included in the email and you can reply by email - no need to open Zulip!</p>
 <p>Tips:</p>
 <ul>
@@ -445,24 +412,25 @@ Note
 <li>Write in plain text, using markdown formatting for lists, code, math, tables, etc. This will then be converted to nicely formatted HTML for people using the browser or app. (This works even for HTML email, as long as you have only used plain text/markdown in the message).</li>
 </ul>
 </section>
-<section id="start-new-topics-in-a-channel" class="level3">
-<h3 class="anchored" data-anchor-id="start-new-topics-in-a-channel">Start new topics in a channel</h3>
+<section id="start-new-topics-in-a-channel-by-email" class="level4">
+<h4 class="anchored" data-anchor-id="start-new-topics-in-a-channel-by-email">Start new topics in a channel by email</h4>
 <p>This requires some initial set up per channel.</p>
 <ol type="1">
-<li>Log in to Zulip. Find the name of the channel you want to send a message to, click <code>...</code> and select <code>Channel settings</code>.</li>
-<li>Under <code>Email address</code>, click the <code>Generate email address</code> button.</li>
-<li>For <code>Who should be the sender of the Zulip messages for this email address?</code> select <code>You</code>.</li>
-<li>Uncheck all the remaining boxes and click the <code>Generate email address</code> button.</li>
-<li>Copy the email address and save in your contacts with a useful alias, e.g.&nbsp; the channel name.</li>
+<li>Log in to Zulip. Find the name of the channel you want to send a message to, click <code>...</code> and select “Channel settings”.</li>
+<li>Under “Email address”, click the “Generate email address” button.</li>
+<li>For “Who should be the sender of the Zulip messages for this email address?” select “You”.</li>
+<li>Uncheck all the remaining boxes and click the “Generate email address” button.</li>
+<li>Copy the email address and save in your contacts with a useful alias, e.g.&nbsp;the channel name.</li>
 </ol>
 <p>Once you have the email address for a channel you can start new topics by emailing the channel with a subject line of your choice. Remember the general tips (no salutation or sign-off, use markdown). If your subject line matches an existing topic, it will appear as a new post in that thread.</p>
+</section>
 </section>
 </section>
 <section id="code-of-conduct" class="level2">
 <h2 class="anchored" data-anchor-id="code-of-conduct">Code of conduct</h2>
 <p>The administrators of R Project Zulip are dedicated to providing a harassment-free chat space for everyone regardless of age, gender, sexual orientation, disability, physical appearance, race, or religion (or lack thereof).</p>
 <section id="expected-behaviour" class="level3">
-<h3 class="anchored" data-anchor-id="expected-behaviour">Expected Behaviour</h3>
+<h3 class="anchored" data-anchor-id="expected-behaviour">Expected behaviour</h3>
 <p>All members agree to:</p>
 <ul>
 <li>Be considerate in language and actions, and respect the boundaries of fellow members.</li>
@@ -505,21 +473,30 @@ Note
 <p>There is no obligation to respond if you don’t feel comfortable. Don’t get drawn into an argument or pile on an offender, a brief comment is enough to signal the issue and give the offender a chance to make it right.</p>
 <p>Individuals users can also <a href="https://r-project.zulipchat.com/help/mute-a-user">mute abusive users</a> to stop harassment that moderators have not yet addressed, or <a href="https://r-project.zulipchat.com/help/collapse-a-message">collapse individual messages</a> that they don’t want to see.</p>
 </section>
-<section id="acknowledgements" class="level3">
-<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<section id="coc-acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="coc-acknowledgements">CoC acknowledgements</h3>
 <p>The CoC is adapted from the <a href="https://www.r-project.org/coc.html">useR! Code of Conduct</a>.</p>
 <p>Parts of the above text are licensed <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Credit to <a href="https://srccon.org/conduct/">SRCCON</a>. This code of conduct was based on that developed for <a href="https://user2018.r-project.org/code_of_conduct/">useR! 2018</a> which was a revision of the code of conduct used at previous useR!s and also drew from <a href="https://ropensci.org/coc/">rOpenSci’s code of conduct</a>.</p>
+<p>The administrators will remind people of the posting guide if necessary and reserve the right to deactivate the membership of anyone persistently acting against the ethos of the chat space.</p>
+<p><strong>Messages on public channels of the Zulip may be put in a public archive or shared outside the Zulip</strong>. Use direct messages/private channels for private messages, which should not be shared without consent.</p>
+<p>By joining the Zulip, members also agree to the general <a href="#code-of-conduct">code of conduct</a> below. The administrators will enforce this code of conduct and expect cooperation in ensuring a safe environment for all.</p>
 </section>
 </section>
-<section id="acknowledgements-1" class="level2">
-<h2 class="anchored" data-anchor-id="acknowledgements-1">Acknowledgements</h2>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
 <ul>
 <li>This work was supported by the Research Software Maintenance Fund, managed by the Software Sustainability Institute and funded by UKRI grant reference AH/Z000114/1.</li>
 <li>This Zulip-specific guidance above is adapted from <a href="https://forge.rust-lang.org/platforms/zulip.html">Rust’s Zulip Guidance</a> and <a href="https://docs.google.com/document/d/1BY_eWPRE4jvUcw1Uzem_obn6ryN7tmApWfEU0lxP63o/edit?tab=t.0#heading=h.gwhrk04d0svl">Zulip tips and tricks for Bioconductor</a>. Thanks to our friends in those communities for their materials and advice on setting up The R Project Zulip.</li>
 </ul>
 </section>
 
-</main>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>To be absolutely clear, all channels on The R Project Zulip are moderated in the sense that admins ensure that posts adhere to the <a href="#code-of-conduct">Code of Conduct</a>. In addition, we use the term “moderated topics” as described here.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -621,11 +598,6 @@ Note
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
